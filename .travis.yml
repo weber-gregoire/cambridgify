@@ -4,8 +4,6 @@ node_js:
 
 script:
   - npm run lint
-before_deploy:
-  - npm run build
 deploy:
   provider: npm
   email: "$NPM_EMAIL"
