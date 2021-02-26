@@ -1,14 +1,14 @@
 language: node_js
 node_js:
-  - "12.13"
+  - "12"
 
-jobs:
-  include:
-    - stage: lintAndTest
-      - npm run lint
-    - stage: npm release
-      if: branch = master
-      deploy:
-        provider: npm
-        email: "$NPM_EMAIL"
-        api_key: "$NPM_AUTH_TOKEN"
+script:
+  - npm run lint
+before_deploy:
+  - npm run build
+deploy:
+  provider: npm
+  email: "$NPM_EMAIL"
+  api_key: "$NPM_AUTH_TOKEN"
+  on:
+    branch: master
