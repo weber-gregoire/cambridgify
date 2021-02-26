@@ -1,5 +1,5 @@
 {
-  "name": "cambridgify",
+  "name": "@greggow/cambridgify",
   "version": "1.0.0",
   "description": "Simple package to show that the scramble word study from cambridge is a fake",
   "main": "cambridgify.js",
@@ -17,5 +17,17 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1"
-  }
+  },
+  "dependencies": {},
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weber-gregoire/cambridgify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/weber-gregoire/cambridgify/issues"
+  },
+  "homepage": "https://github.com/weber-gregoire/cambridgify#readme"
 }
