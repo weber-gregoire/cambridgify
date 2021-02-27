@@ -10,22 +10,23 @@ const randomizeArray = (inputArray) => {
   return result;
 };
 
-const scrambleWord = (word) => {
-  if (word.length > 3) {
-    const firstLetter = word.charAt(0);
-    const middleLetters = word.split('').slice(1, word.length - 1);
-    const lastLetter = word.charAt(word.length - 1);
-    const scrambledLetters = randomizeArray(middleLetters);
-    return `${firstLetter}${scrambledLetters.join('')}${lastLetter}`;
+class Cambridgify {
+
+  scrambleText (text) {
+    return text.split(' ').map(this.scrambleWord).join(' ');
   }
-  return word;
-};
 
-const cambridgify = (text) => {
-  return text.split(' ').map(scrambleWord).join(' ');
-};
+  scrambleWord (word) {
+    if (word.length > 3) {
+      const firstLetter = word.charAt(0);
+      const middleLetters = word.split('').slice(1, word.length - 1);
+      const lastLetter = word.charAt(word.length - 1);
+      const scrambledLetters = randomizeArray(middleLetters);
+      return `${firstLetter}${scrambledLetters.join('')}${lastLetter}`;
+    }
+    return word;
+  }
 
-module.exports = {
-  cambridgify,
-  scrambleWord
-};
+}
+
+module.exports = new Cambridgify();

@@ -1,0 +1,19 @@
+{
+  "register": "babel-register",
+  "exclude": [
+    "test/**/*.js",
+    "**/coverage/**"
+  ],
+  "include": [
+    "**/*.js"
+  ],
+  "reporter": [
+    "text",
+    "html"
+  ],
+  "all": true,
+  "branches": 95,
+  "functions": 95,
+  "lines": 95,
+  "statements": 95
+}

@@ -11,6 +11,27 @@
     "sourceType": "module"
   },
   "rules": {
-    "semi": [2, "always"]
-  }
+    "semi": [ 2, "always" ],
+    "padded-blocks": [ 2, { "classes": "always" } ],
+    "comma-dangle": [ 2, {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "never",
+        "exports": "never",
+        "functions": "never"
+    } ]
+  },
+  "overrides": [{
+    "files": [ "test/**" ],
+    "rules": {
+      "no-unused-expressions": 0
+    },
+    "globals": {
+      "after": false,
+      "before": false,
+      "beforeEach": false,
+      "describe": false,
+      "it": false
+    }
+  }]
 }

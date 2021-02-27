@@ -4,7 +4,8 @@
   "description": "Simple package to show that the scramble word study from cambridge is a fake",
   "main": "cambridgify.js",
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "nyc --check-coverage=true mocha test/* "
   },
   "keywords": [
     "cambridge"
@@ -12,11 +13,16 @@
   "author": "Grégoire Weber",
   "license": "MIT",
   "devDependencies": {
+    "chai": "^4.3.0",
     "eslint": "^7.20.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.3.1"
+    "eslint-plugin-promise": "^4.3.1",
+    "mocha": "^8.3.0",
+    "nyc": "^15.1.0",
+    "sinon": "^9.2.4",
+    "sinon-chai": "^3.5.0"
   },
   "dependencies": {},
   "publishConfig": {
