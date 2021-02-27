@@ -12,7 +12,7 @@ const originalScrambleWord = cambridgify.scrambleWord;
 const scrambleTextMock = stub();
 const scrambleWordMock = stub();
 
-function testShortWordScrambling(shortWord) {
+function testShortWordScrambling (shortWord) {
   for (let i = 0; i < 5; ++i) {
     // When
     const result = cambridgify.scrambleWord(shortWord);
@@ -22,7 +22,7 @@ function testShortWordScrambling(shortWord) {
   }
 }
 
-function testLongWordScrambling(longWord) {
+function testLongWordScrambling (longWord) {
   for (let i = 0; i < 5; ++i) {
     // When
     const result = cambridgify.scrambleWord(longWord);
