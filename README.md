@@ -11,4 +11,33 @@ But if you use that code to try, and use long word, you'll be able to experience
 
 ## How to use
 
-Will be added very soon :)
+Add the package to your dependencies
+```javascript
+npm install --save @greggow/cambridgify
+```
+
+Include the Cambridgify object
+```javascript
+const cambridgify = require('../cambridgify');
+```
+
+Use the instance to scramble wholes texts or just words
+
+```javascript
+const text = 'According to a researcher at Cambridge University, it doesn\'t matter in what order the letters in a word are, the only important thing is that the first and last letter be at the right place. The rest can be a total mess and you can still read it without problem. This is because the human mind does not read every letter by itself, but the word as a whole.';
+const scrambledText = cambridgify.scrambleText(text);
+console.log(scrambledText);
+
+/*
+Should output something like this (not taht readable uh ? :p ) :
+Aidcocrng to a reeescrrah at Cagmbirde Urnivtseyi, it doesn't matetr in what order the ltretes in a word are, the only irtmnpaot tnihg is that the first and last letetr be at the right plaec. The rest can be a total mses and you can still read it wihotut prlemob. This is bescaue the human mnid does not read every lteter by iestfl, but the wrod as a wlhoe.
+*/
+```
+
+```javascript
+const word = 'Cambridge';
+const scrambledWord = cambridgify.scrambleWord(word);
+console.log(scrambledWord);
+
+// Should output something like this : Cagmbirde
+```
