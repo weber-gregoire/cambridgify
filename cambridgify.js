@@ -10,10 +10,20 @@ const randomizeArray = (inputArray) => {
   return result;
 };
 
+const MAX_RETRY = 3;
+
 class Cambridgify {
 
   scrambleText (text) {
-    return text.split(' ').map(this.scrambleWord).join(' ');
+    return text.split(' ').map((word) => {
+      let newWord;
+      let tryCount = 0;
+      do {
+        newWord = this.scrambleWord(word);
+        ++tryCount;
+      } while (tryCount < MAX_RETRY && newWord === word);
+      return newWord
+    }).join(' ');
   }
 
   scrambleWord (word) {

@@ -93,6 +93,40 @@ describe('Cambridgify', () => {
       expect(scrambleWordMock).to.have.been.calledWith(words[2][0]);
       expect(scrambleWordMock).to.have.been.calledWith(words[3][0]);
     });
+
+    it('Should retry if randomization is the same as original word', () => {
+      // Given
+      const oneWordText = 'Word';
+      const scrambledWord = 'Wrod';
+      scrambleWordMock.onCall(0).returns(oneWordText);
+      scrambleWordMock.onCall(1).returns(scrambledWord);
+
+      // When
+      const result = cambridgify.scrambleText(oneWordText);
+
+      // Then
+      expect(result).to.be.equal(scrambledWord);
+      expect(scrambleWordMock).to.have.been.calledTwice;
+      expect(scrambleWordMock).to.have.been.calledWith(oneWordText);
+    });
+
+    it('Should not retry more thant three times per word', () => {
+      // Given
+      const oneWordText = 'Word';
+      const scrambledWord = 'Wrod';
+      scrambleWordMock.onCall(0).returns(oneWordText);
+      scrambleWordMock.onCall(1).returns(oneWordText);
+      scrambleWordMock.onCall(2).returns(oneWordText);
+      scrambleWordMock.onCall(3).returns(scrambledWord);
+
+      // When
+      const result = cambridgify.scrambleText(oneWordText);
+
+      // Then
+      expect(result).to.be.equal(oneWordText);
+      expect(scrambleWordMock).to.have.been.calledThrice;
+      expect(scrambleWordMock).to.have.been.calledWith(oneWordText);
+    });
   });
 
   describe('scrambleWord', () => {
