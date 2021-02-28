@@ -18,7 +18,7 @@ npm install --save @greggow/cambridgify
 
 Include the Cambridgify object
 ```javascript
-const cambridgify = require('../cambridgify');
+const cambridgify = require('@greggow/cambridgify');
 ```
 
 Use the instance to scramble wholes texts or just words
