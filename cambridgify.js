@@ -22,7 +22,7 @@ class Cambridgify {
         newWord = this.scrambleWord(word);
         ++tryCount;
       } while (tryCount < MAX_RETRY && newWord === word);
-      return newWord
+      return newWord;
     }).join(' ');
   }
 
