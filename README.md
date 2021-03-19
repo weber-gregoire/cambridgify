@@ -21,7 +21,7 @@ Include the Cambridgify object
 const cambridgify = require('@greggow/cambridgify');
 ```
 
-Use the instance to scramble wholes texts or just words
+Use the instance to scramble texts
 
 ```javascript
 const text = 'According to a researcher at Cambridge University, it doesn\'t matter in what order the letters in a word are, the only important thing is that the first and last letter be at the right place. The rest can be a total mess and you can still read it without problem. This is because the human mind does not read every letter by itself, but the word as a whole.';
@@ -32,12 +32,4 @@ console.log(scrambledText);
 Should output something like this (not taht readable uh ? :p ) :
 Aidcocrng to a reeescrrah at Cagmbirde Urnivtseyi, it doesn't matetr in what order the ltretes in a word are, the only irtmnpaot tnihg is that the first and last letetr be at the right plaec. The rest can be a total mses and you can still read it wihotut prlemob. This is bescaue the human mnid does not read every lteter by iestfl, but the wrod as a wlhoe.
 */
-```
-
-```javascript
-const word = 'Cambridge';
-const scrambledWord = cambridgify.scrambleWord(word);
-console.log(scrambledWord);
-
-// Should output something like this : Cagmbirde
 ```

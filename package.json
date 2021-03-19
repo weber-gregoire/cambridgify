@@ -1,6 +1,6 @@
 {
   "name": "@greggow/cambridgify",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "Simple package to show that the scramble word study from cambridge is a fake",
   "main": "cambridgify.js",
   "scripts": {

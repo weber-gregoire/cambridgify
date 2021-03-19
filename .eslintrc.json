@@ -12,13 +12,14 @@
   },
   "rules": {
     "semi": [ 2, "always" ],
+    "space-before-function-paren": ["error", "never"],
     "padded-blocks": [ 2, { "classes": "always" } ],
     "comma-dangle": [ 2, {
         "arrays": "always-multiline",
         "objects": "always-multiline",
         "imports": "never",
         "exports": "never",
-        "functions": "never"
+        "functions": "always-multiline"
     } ]
   },
   "overrides": [{
