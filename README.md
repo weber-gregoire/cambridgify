@@ -9,6 +9,10 @@ The text used to démonstrate that is actually well crafted to make it easy to r
 
 But if you use that code to try, and use long word, you'll be able to experience by yourself that this do not really work.
 
+## Live example
+
+You yan play around with the module on [this dedicated page][0]
+
 ## How to use
 
 Add the package to your dependencies
@@ -33,3 +37,5 @@ Should output something like this (not taht readable uh ? :p ) :
 Aidcocrng to a reeescrrah at Cagmbirde Urnivtseyi, it doesn't matetr in what order the ltretes in a word are, the only irtmnpaot tnihg is that the first and last letetr be at the right plaec. The rest can be a total mses and you can still read it wihotut prlemob. This is bescaue the human mnid does not read every lteter by iestfl, but the wrod as a wlhoe.
 */
 ```
+
+[0]: https://unsceptiqueaubureau.com/coffee-break/selon-une-etude-de-cambridge
