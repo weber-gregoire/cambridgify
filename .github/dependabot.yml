@@ -1,0 +1,11 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "friday"
+    # Disable version updates for npm dependencies
+    open-pull-requests-limit: 25
+    reviewers:
+      - "weber-gregoire"
